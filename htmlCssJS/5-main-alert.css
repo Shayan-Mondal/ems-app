@@ -1,0 +1,50 @@
+#post {
+    border-radius: 259px;
+    border-color: whitesmoke;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    /* margin-left: 510px; */
+    background-color: rgb(17, 16, 16);
+    color: whitesmoke;
+    font-style: italic;
+    font-family: cursive;
+}
+#post:hover{
+    background-color: rgb(231, 45, 12);
+    color: black;
+    cursor: grabbing;
+}
+#delete {
+    border-radius: 375px;
+    border-color: whitesmoke;
+    padding-left: 18px;
+    padding-right: 16px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    background-color: rgb(17, 16, 16);
+    color: whitesmoke;
+    font-style: italic;
+    font-family: cursive;
+}
+#delete:hover{
+    background-color: rgb(231, 45, 12);
+    color: black;
+    cursor: grabbing;
+}
+#input1{
+    border-color: rgb(13, 13, 70);
+    border-radius: 375px;
+    font-style: italic;
+    font-family: cursive;
+    padding-left: 18px;
+    padding-right: 16px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+}
+#h{
+    color: rgb(7, 7, 46);
+    text-shadow: 3px 3px 4px cornflowerblue;
+    
+}
