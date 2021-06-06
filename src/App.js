@@ -1,49 +1,45 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import { FaceBook } from "./components/FaceBook";
+import { Tweet } from "./components/Tweet";
+import { Booking } from "./components/Booking";
+import { Home } from "./components/Home";
+import { NavBar } from "./components/NavBar";
+import { EmployeeUpsert } from "./components/EmployeeUpsert";
+import { EmployeeList } from "./components/EmployeeList";
 
 export default function App() {
   return (
-    <div>
-      <MyDynamicForm />;
-      <MyDynamicForm />
-    </div>
+    <Router>
+      <NavBar />
+
+      <Switch>
+        <Route path="/tweet" exact>
+          <Tweet />
+        </Route>
+
+        <Route path="/facebook" exact>
+          <FaceBook />
+        </Route>
+
+        <Route path="/booking" exact>
+          <Booking />
+        </Route>
+
+        <Route path="/employeeupsert" exact>
+          <EmployeeUpsert />
+        </Route>
+
+        <Route path="/employeelist" exact>
+          <EmployeeList />
+        </Route>
+
+        <Route path="/home" exact>
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
-
-const MyDynamicForm = () => {
-  const [list, setList] = useState([""]);
-
-  const [newTweet, setNewTweet] = useState([""]);
-
-  const readAndUpdateTweet = (e) => setNewTweet(e.target.value);
-
-  const post = () => {
-    setList([newTweet, ...list]);
-    setNewTweet("");
-  };
-  return (
-    <div>
-      <h1 className="h">Tweeter</h1>
-
-      <input
-        type="text"
-        className="form"
-        value={newTweet}
-        onChange={(e) => readAndUpdateTweet(e)}
-        placeholder="What are you thinking..."
-      />
-
-      <input
-        type="button"
-        className="button"
-        value="Post"
-        onClick={() => post()}
-      />
-
-      {list.map((item, index) => (
-        <div key={index}>{item}</div>
-      ))}
-    </div>
-  );
-};

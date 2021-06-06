@@ -69,3 +69,8 @@
   color: rgb(7, 7, 46);
   text-shadow: 3px 3px 4px cornflowerblue;
 }
+.h11 {
+  color: rgb(213, 213, 235);
+  background-color: rgb(37, 37, 94);
+  position: sticky;
+}
